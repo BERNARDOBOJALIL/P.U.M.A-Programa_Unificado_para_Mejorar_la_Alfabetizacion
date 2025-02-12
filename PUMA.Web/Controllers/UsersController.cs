@@ -54,7 +54,7 @@ namespace PUMA.Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Email,Password,Scorestreak")] User user)
+        public async Task<IActionResult> Create([Bind("Id,Name,Email,Password,Scorestreak,Role,Active")] User user)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace PUMA.Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Email,Password,Scorestreak")] User user)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Email,Password,Scorestreak,Role,Active")] User user)
         {
             if (id != user.Id)
             {

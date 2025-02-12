@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
 using PUMA.Shared.Entities;
 
 namespace PUMA.Web.Data
@@ -14,7 +15,7 @@ namespace PUMA.Web.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.Entity<User>().HasIndex(x => x.Name).IsUnique();
+            modelBuilder.Entity<User>().HasIndex(x => x.Email).IsUnique();
         }
     }
 }
