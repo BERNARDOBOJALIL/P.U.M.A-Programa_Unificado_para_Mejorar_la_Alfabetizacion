@@ -16,6 +16,9 @@ namespace PUMA.Web.Data
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<User>().HasIndex(x => x.Email).IsUnique();
+            modelBuilder.Entity<User>().Property(u => u.Role).HasDefaultValue("Estudiante");
+            modelBuilder.Entity<User>().Property(u => u.Active).HasDefaultValue(true);
+            modelBuilder.Entity<User>().Property(u => u.Scorestreak).HasDefaultValue(0);
         }
     }
 }

@@ -28,15 +28,15 @@ namespace PUMA.Shared.Entities
 
         [Required(ErrorMessage = "El campo {0} es obligatorio")]
         [Display(Name = "Racha de puntos")]
-        public int? Scorestreak { get; set; }
+        public int Scorestreak { get; set; } = 0;
 
         [Required(ErrorMessage = "El campo {0} es obligatorio")]
         [Display(Name = "Rol")]
         [MaxLength(30, ErrorMessage = "El campo {0} debe tener máximo {1} caracteres")]
-        public string? Role { get; set; }
+        public string Role { get; private set; } = "Estudiante";
 
         [Required(ErrorMessage = "El campo {0} es obligatorio")]
         [Display(Name = "Activo")]
-        public bool? Active { get; set; }
+        public bool Active { get; set; } = true;
     }
 }
