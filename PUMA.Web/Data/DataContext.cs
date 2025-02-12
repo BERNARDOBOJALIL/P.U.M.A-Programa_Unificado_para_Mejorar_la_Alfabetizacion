@@ -7,6 +7,7 @@ namespace PUMA.Web.Data
     public class DataContext: DbContext
     {
         public DbSet <User> Users { get; set; }
+        public DbSet <Exercise> Exercises { get; set; }
 
         public DataContext(DbContextOptions <DataContext> options): base(options)
         {
