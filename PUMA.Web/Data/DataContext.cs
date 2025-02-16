@@ -14,6 +14,7 @@ namespace PUMA.Web.Data
         public DbSet <Exercise> Exercises { get; set; }
         public DbSet<Course> Courses { get; set; }
         public DbSet<Option> Options { get; set; }
+        public DbSet<Lesson> Lessons { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -22,6 +23,9 @@ namespace PUMA.Web.Data
             modelBuilder.Entity<User>().Property(u => u.Active).HasDefaultValue(true);
             modelBuilder.Entity<User>().Property(u => u.Scorestreak).HasDefaultValue(0);
             modelBuilder.Entity<Course>().HasIndex(x => x.Name).IsUnique();
+            modelBuilder.Entity<Lesson>().Property(l => l.Title).IsRequired().HasMaxLength(200);
+            modelBuilder.Entity<Lesson>().Property(l => l.Content).IsRequired().HasMaxLength(5000);
+            modelBuilder.Entity<Lesson>().Property(l => l.Difficulty).IsRequired();
         }
     }
 }
