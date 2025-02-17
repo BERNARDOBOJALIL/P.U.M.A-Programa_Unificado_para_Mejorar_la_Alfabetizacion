@@ -20,3 +20,89 @@ html {
 body {
   margin-bottom: 60px;
 }
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #eef2f7;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #0056b3;
+    padding: 15px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+    .navbar .navbar-brand {
+        color: black;
+        font-weight: bold;
+        font-size: 1.8rem;
+    }
+
+    .navbar .nav-link {
+        color: black !important;
+        transition: color 0.3s ease-in-out;
+        font-size: 1.1rem;
+        padding: 8px 15px;
+        border-radius: 5px;
+    }
+
+        .navbar .nav-link:hover {
+            background-color: #ffdd57;
+            color: #0056b3 !important;
+        }
+
+/* Main Content */
+.container {
+    max-width: 1200px;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    transition: transform 0.3s;
+}
+
+    .container:hover {
+        transform: scale(1.02);
+    }
+
+/* Footer */
+.footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+    font-size: 1rem;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+    .footer a {
+        color: #ffdd57;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+/* Buttons and Interactive Elements */
+button, .btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+    button:hover, .btn:hover {
+        background-color: #ffdd57;
+        color: #0056b3;
+        transform: scale(1.05);
+    }
