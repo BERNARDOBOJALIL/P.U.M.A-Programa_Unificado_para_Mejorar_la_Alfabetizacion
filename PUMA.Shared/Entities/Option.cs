@@ -17,7 +17,7 @@ namespace PUMA.Shared.Entities
         public string? Content { get; set; }
 
         [Required(ErrorMessage = "El campo {0} es obligatorio")]
-        [Display(Name = "IsCorrect")]
+        [Display(Name = "Es correcto")]
         public bool IsCorrect { get; set; }
     }
 }
